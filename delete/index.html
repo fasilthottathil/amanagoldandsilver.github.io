@@ -23,7 +23,8 @@
       if (phone) {
         // Replace any non-digit characters in the phone number
         phone = phone.replace(/\D/g, '');
-        window.location.href = 'http://amanagoldandsilver.com/delete/' + phone;
+        let url = 'http://amanagoldandsilver.com/delete/' + phone;
+        window.open(url, '_blank');
       }
     }
   </script>
@@ -40,7 +41,7 @@
       <div class="mdl-cell mdl-cell--6-col mdl-cell--3-offset-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone">
         <p>To delete your account, you should install the Amana Gold App on your Android phone.</p>
 
-        <form onsubmit="redirectToDeletePage(); return false;">
+        <form onsubmit="redirectToDeletePage(); return false;" target="_blank">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
             <input class="mdl-textfield__input" type="tel" id="phone" pattern="[0-9]{10}" required>
             <label class="mdl-textfield__label" for="phone">Enter your phone number</label>
